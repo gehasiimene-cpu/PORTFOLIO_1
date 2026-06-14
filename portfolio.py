@@ -284,7 +284,7 @@ def main(page: ft.Page):
                         bgcolor="#1F1F1F",
                         border_radius=20,
                         width=760,
-                        alignment=ft.MainAxisAlignment.CENTER,
+                        alignment=ft.alignment.center,
                     ),
 
                     ft.Container(
@@ -293,7 +293,7 @@ def main(page: ft.Page):
                         padding=ft.Padding(left=40, top=20, right=40, bottom=20),
                         shadow=ft.BoxShadow(blur_radius=15, color="#00000055"),
                         width=760,
-                        alignment=ft.MainAxisAlignment.CENTER,
+                        alignment=ft.alignment.center,
                         content=ft.Column(
                             horizontal_alignment=ft.CrossAxisAlignment.CENTER,
                             spacing=6,
@@ -320,7 +320,7 @@ def main(page: ft.Page):
                         ),
                         padding=ft.Padding(left=20, top=0, right=20, bottom=0),
                         width=760,
-                        alignment=ft.MainAxisAlignment.CENTER,
+                        alignment=ft.alignment.center,
                     ),
 
                     ft.Divider(color="#FF6B35", height=55),
@@ -329,7 +329,7 @@ def main(page: ft.Page):
                     ft.Container(
                         padding=20,
                         width=900,
-                        alignment=ft.MainAxisAlignment.CENTER,
+                        alignment=ft.alignment.center,
                         content=ft.ResponsiveRow(
                             alignment=ft.MainAxisAlignment.CENTER,
                             vertical_alignment=ft.CrossAxisAlignment.CENTER,
@@ -961,7 +961,7 @@ def main(page: ft.Page):
             controls=[
                 ft.Text("Gehas Iimene", size=48, weight="bold", color="white"),
             ],
-            alignment=ft.MainAxisAlignment.CENTER,
+            alignment=ft.alignment.center,
             horizontal_alignment=ft.CrossAxisAlignment.CENTER,
             spacing=8,
         ),
@@ -1009,5 +1009,4 @@ def main(page: ft.Page):
 
 if __name__ == "__main__":
     # Start the Flet app (desktop/native view)
-    import os
-    ft.app(target=main, view=ft.AppView.WEB_BROWSER, port=int(os.environ.get("PORT", 8550)))
+    ft.run(main)
