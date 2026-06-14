@@ -1009,4 +1009,4 @@ def main(page: ft.Page):
 
 if __name__ == "__main__":
     # Start the Flet app (desktop/native view)
-    ft.run(main)
+    ft.app(main)
